@@ -12,10 +12,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "game-core": "workspace:^",
     "expo": "~48.0.9",
     "expo-status-bar": "~1.4.4",
     "expo-system-ui": "^2.2.1",
+    "game-core": "workspace:^",
     "react": "18.2.0",
     "react-native": "0.71.6",
     "theme": "workspace:^",

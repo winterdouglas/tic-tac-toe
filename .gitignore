@@ -32,7 +32,7 @@ web-build/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-!.yarn/cache
+# !.yarn/cache
 
 # VSCode
 .vscode/*
