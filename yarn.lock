@@ -1454,7 +1454,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.20.0, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.18.6, @babel/runtime@npm:^7.20.0, @babel/runtime@npm:^7.8.4":
   version: 7.21.5
   resolution: "@babel/runtime@npm:7.21.5"
   dependencies:
@@ -2895,12 +2895,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18":
-  version: 18.2.1
-  resolution: "@types/react-dom@npm:18.2.1"
+"@types/react-dom@npm:~18.0.10":
+  version: 18.0.11
+  resolution: "@types/react-dom@npm:18.0.11"
   dependencies:
     "@types/react": "*"
-  checksum: 4e607a9d08f707ae2bd6b377f1da32989dcbe4e38ac39110423a1f6bc95dd53a5484f7f952b34e9d12b5f29a265d52a8c74c1a7d1d1e25be0fa69ccf9d64209f
+  checksum: 579691e4d5ec09688087568037c35edf8cfb1ab3e07f6c60029280733ee7b5c06d66df6fcc90786702c93ac8cb13bc7ff16c79ddfc75d082938fbaa36e1cdbf4
+  languageName: node
+  linkType: hard
+
+"@types/react-native@npm:^0.70":
+  version: 0.70.13
+  resolution: "@types/react-native@npm:0.70.13"
+  dependencies:
+    "@types/react": "*"
+  checksum: 2ff157f24b5e7c3c3bf22556b4ea206029e0f4c52607c77f1ff0f91228478e11b6cd4b76322db8ea0be3d118b39b0bde7893e43013fff3e3191866a064857d8c
   languageName: node
   linkType: hard
 
@@ -2913,7 +2922,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18":
+"@types/react@npm:*":
   version: 18.2.0
   resolution: "@types/react@npm:18.2.0"
   dependencies:
@@ -2921,6 +2930,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: db3d92b423150222a666329f7aa3023e3e942044700557b8a7d161530847e621aec9f56c9e7f71761b06dd164c8a7b17ad52355863efe80963dffa5537e8e5fd
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:~18.0.27":
+  version: 18.0.38
+  resolution: "@types/react@npm:18.0.38"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 34481c79f4f7ea2aefbaa45281319dc183200230d932d968463eba1643bd3635073d0a17c5c613150a69e36ca18b811ecffafea6384fa3dff3b5203866339d69
   languageName: node
   linkType: hard
 
@@ -2961,7 +2981,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-components@npm:^5.1.26":
+"@types/styled-components-react-native@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "@types/styled-components-react-native@npm:5.2.1"
+  dependencies:
+    "@types/react": "*"
+    "@types/react-native": ^0.70
+    "@types/styled-components": "*"
+  checksum: 1c54606a65c65db5be51782ec8eff1689582fc9b39396fbdbb2bba505b8f31ed52bf9478a10dd765fd0aeb8e08061f4853f85b75fcce27d041b1194c4d5879f0
+  languageName: node
+  linkType: hard
+
+"@types/styled-components@npm:*, @types/styled-components@npm:^5.1.26":
   version: 5.1.26
   resolution: "@types/styled-components@npm:5.1.26"
   dependencies:
@@ -4661,6 +4692,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-in-js-utils@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "css-in-js-utils@npm:3.1.0"
+  dependencies:
+    hyphenate-style-name: ^1.0.3
+  checksum: 066318e918c04a5e5bce46b38fe81052ea6ac051bcc6d3c369a1d59ceb1546cb2b6086901ab5d22be084122ee3732169996a3dfb04d3406eaee205af77aec61b
+  languageName: node
+  linkType: hard
+
 "css-to-react-native@npm:^3.0.0":
   version: 3.2.0
   resolution: "css-to-react-native@npm:3.2.0"
@@ -5614,7 +5654,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-font@npm:~11.1.1":
+"expo-font@npm:^11.1.1, expo-font@npm:~11.1.1":
   version: 11.1.1
   resolution: "expo-font@npm:11.1.1"
   dependencies:
@@ -5678,7 +5718,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo@npm:~48.0.9":
+"expo@npm:~48.0.15":
   version: 48.0.15
   resolution: "expo@npm:48.0.15"
   dependencies:
@@ -5779,6 +5819,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-loops@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "fast-loops@npm:1.1.3"
+  checksum: b674378ba2ed8364ca1a00768636e88b22201c8d010fa62a8588a4cace04f90bac46714c13cf638be82b03438d2fe813600da32291fb47297a1bd7fa6cef0cee
+  languageName: node
+  linkType: hard
+
 "fast-xml-parser@npm:^4.0.12":
   version: 4.2.2
   resolution: "fast-xml-parser@npm:4.2.2"
@@ -5831,7 +5878,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fbjs@npm:^3.0.0":
+"fbjs@npm:^3.0.0, fbjs@npm:^3.0.4":
   version: 3.0.4
   resolution: "fbjs@npm:3.0.4"
   dependencies:
@@ -6155,9 +6202,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "game-core@workspace:packages/game-core"
   dependencies:
-    "@types/react": ^18.0.37
+    "@types/react": ~18.0.27
+    "@types/react-dom": ~18.0.10
+    "@types/react-native": ^0.71.6
+    "@types/styled-components": ^5.1.26
+    "@types/styled-components-react-native": ^5.2.1
     eslint-config-custom: "workspace:^"
     react: 18.2.0
+    react-native: 0.71.7
+    styled-components: ^5.3.10
+    theme: "workspace:^"
     tsconfig: "workspace:^"
     typescript: ^4.9.4
     utils: "workspace:^"
@@ -6683,6 +6737,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hyphenate-style-name@npm:^1.0.3":
+  version: 1.0.4
+  resolution: "hyphenate-style-name@npm:1.0.4"
+  checksum: 4f5bf4b055089754924babebaa23c17845937bcca6aee95d5d015f8fa1e6814279002bd6a9e541e3fac2cd02519fc76305396727066c57c8e21a7e73e7a12137
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:0.4.24":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
@@ -6793,6 +6854,16 @@ __metadata:
   version: 1.3.8
   resolution: "ini@npm:1.3.8"
   checksum: dfd98b0ca3a4fc1e323e38a6c8eb8936e31a97a918d3b377649ea15bdb15d481207a0dda1021efbd86b464cae29a0d33c1d7dcaf6c5672bee17fa849bc50a1b3
+  languageName: node
+  linkType: hard
+
+"inline-style-prefixer@npm:^6.0.1":
+  version: 6.0.4
+  resolution: "inline-style-prefixer@npm:6.0.4"
+  dependencies:
+    css-in-js-utils: ^3.1.0
+    fast-loops: ^1.1.3
+  checksum: caf7a75d18acbedc7e3b8bfac17563082becd2df6b65accad964a6afdf490329b42315c37fe65ba0177cc10fd32809eb40d62aba23a0118c74d87d4fc58defa2
   languageName: node
   linkType: hard
 
@@ -8052,6 +8123,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"memoize-one@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "memoize-one@npm:6.0.0"
+  checksum: f185ea69f7cceae5d1cb596266dcffccf545e8e7b4106ec6aa93b71ab9d16460dd118ac8b12982c55f6d6322fcc1485de139df07eacffaae94888b9b3ad7675f
+  languageName: node
+  linkType: hard
+
 "memory-cache@npm:~0.2.0":
   version: 0.2.0
   resolution: "memory-cache@npm:0.2.0"
@@ -8671,17 +8749,21 @@ __metadata:
   dependencies:
     "@babel/core": ^7.20.0
     "@types/node": ^18.15.11
-    "@types/react": ^18.0.37
-    "@types/react-dom": ^18.0.11
+    "@types/react": ~18.0.27
+    "@types/react-dom": ~18.0.10
     "@types/react-native": ^0.71.6
+    "@types/styled-components": ^5.1.26
+    "@types/styled-components-react-native": ^5.2.1
     babel-plugin-module-resolver: ^5.0.0
     eslint-config-custom: "workspace:^"
-    expo: ~48.0.9
+    expo: ~48.0.15
+    expo-font: ^11.1.1
     expo-status-bar: ~1.4.4
     expo-system-ui: ^2.2.1
     game-core: "workspace:^"
     react: 18.2.0
-    react-native: 0.71.6
+    react-native: 0.71.7
+    styled-components: ^5.3.10
     theme: "workspace:^"
     tsconfig: "workspace:^"
     typescript: ^4.9.4
@@ -8911,6 +8993,13 @@ __metadata:
   bin:
     nopt: bin/nopt.js
   checksum: 82149371f8be0c4b9ec2f863cc6509a7fd0fa729929c009f3a58e4eb0c9e4cae9920e8f1f8eb46e7d032fec8fb01bede7f0f41a67eb3553b7b8e14fa53de1dac
+  languageName: node
+  linkType: hard
+
+"normalize-css-color@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "normalize-css-color@npm:1.0.2"
+  checksum: 7433dc995a8d27c9384059ef0b52ceef47f4fab1bab55f1f085058b27e7472466ce321f46391fc85b6851db5212b9bd2bf55f5dc361da01a8a8cf4c360f69dab
   languageName: node
   linkType: hard
 
@@ -9875,9 +9964,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native@npm:0.71.6":
-  version: 0.71.6
-  resolution: "react-native@npm:0.71.6"
+"react-native-web@npm:^0.19.4":
+  version: 0.19.4
+  resolution: "react-native-web@npm:0.19.4"
+  dependencies:
+    "@babel/runtime": ^7.18.6
+    fbjs: ^3.0.4
+    inline-style-prefixer: ^6.0.1
+    memoize-one: ^6.0.0
+    normalize-css-color: ^1.0.2
+    nullthrows: ^1.1.1
+    postcss-value-parser: ^4.2.0
+    styleq: ^0.1.2
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: e8cf1f3d01a7d160bd02a28c90d239b1dcb7ee0661344c74b908cf205f9f1acf8dd87307cf1a1a30dfd4fe1604f49820f68e5cf721cd5e8693bd16e3d5a7e87b
+  languageName: node
+  linkType: hard
+
+"react-native@npm:0.71.7":
+  version: 0.71.7
+  resolution: "react-native@npm:0.71.7"
   dependencies:
     "@jest/create-cache-key-function": ^29.2.1
     "@react-native-community/cli": 10.2.2
@@ -9917,7 +10025,7 @@ __metadata:
     react: 18.2.0
   bin:
     react-native: cli.js
-  checksum: aadbd9b57dd9b10a41b60337ea1a4103e2fb2320784bf148100e807bd0a77929bdb310ea68d054165cd3c00647a3d020eecb0efb864cc7a93733b2d580e1e675
+  checksum: efd91d5560290b883e0d3d3482cc4657268c2e480171b63a0c6b7dc8f6b1331298feac7d9966e1831d95d9fee893dfa831252052561232843e4982880238f09e
   languageName: node
   linkType: hard
 
@@ -9947,7 +10055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18":
+"react@npm:18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -10431,7 +10539,10 @@ __metadata:
     "@manypkg/cli": latest
     eslint: ^8.38.0
     eslint-config-custom: "workspace:^"
+    postcss-styled-syntax: ^0.4.0
     prettier: ^2.8.7
+    stylelint: ^15.6.0
+    stylelint-config-standard: ^33.0.0
     turbo: latest
   languageName: unknown
   linkType: soft
@@ -11234,7 +11345,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^15.5.0":
+"stylelint@npm:^15.6.0":
   version: 15.6.0
   resolution: "stylelint@npm:15.6.0"
   dependencies:
@@ -11283,6 +11394,13 @@ __metadata:
   bin:
     stylelint: bin/stylelint.js
   checksum: da246969361a141a06533c57b975f6a120b7e3c8591e20057a0e561397c151d0d13f8efa423663a5c5108dc0ea9b8e73756031ea54b281f578222d1e11737263
+  languageName: node
+  linkType: hard
+
+"styleq@npm:^0.1.2":
+  version: 0.1.3
+  resolution: "styleq@npm:0.1.3"
+  checksum: 14a8d23abd914166a9b4bd04ed753bd91363f0e029ee4a94ec2c7dc37d3213fe01fceee22dc655288da3ae89f5dc01cec42d5e2b58478b0dea33bf5bdf509be1
   languageName: node
   linkType: hard
 
@@ -11505,9 +11623,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "theme@workspace:packages/theme"
   dependencies:
-    "@types/react": ^18.0.37
+    "@types/react": ~18.0.27
+    "@types/styled-components": ^5.1.26
+    "@types/styled-components-react-native": ^5.2.1
     eslint-config-custom: "workspace:^"
     react: 18.2.0
+    styled-components: ^5.3.10
     tsconfig: "workspace:^"
     typescript: ^4.9.4
   languageName: unknown
@@ -12291,18 +12412,16 @@ __metadata:
   dependencies:
     "@react-spring/web": ^9.7.2
     "@types/node": ^18.15.11
-    "@types/react": ^18.0.37
-    "@types/react-dom": ^18.0.11
+    "@types/react": ~18.0.27
+    "@types/react-dom": ~18.0.10
     "@types/styled-components": ^5.1.26
     "@vitejs/plugin-react": ^3.1.0
     eslint-config-custom: "workspace:^"
     game-core: "workspace:^"
-    postcss-styled-syntax: ^0.4.0
     react: 18.2.0
     react-dom: 18.2.0
-    styled-components: ^5.3.9
-    stylelint: ^15.5.0
-    stylelint-config-standard: ^33.0.0
+    react-native-web: ^0.19.4
+    styled-components: ^5.3.10
     theme: "workspace:^"
     tsconfig: "workspace:^"
     typescript: ^4.9.4

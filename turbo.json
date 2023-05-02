@@ -35,6 +35,9 @@
     },
     "format": {
       "cache": false
+    },
+    "doctor": {
+      "cache": false
     }
   }
 }

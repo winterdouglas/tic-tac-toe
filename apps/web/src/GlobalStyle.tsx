@@ -1,15 +1,24 @@
 import { createGlobalStyle } from "styled-components";
+import outfitBoldFontUrl from "../../../assets/fonts/Outfit-Bold.ttf";
+import outfitMediumFontUrl from "../../../assets/fonts/Outfit-Medium.ttf";
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: Outfit-Bold;
+    src: url(${outfitBoldFontUrl}) format('truetype');
+  }
+
+  @font-face {
+    font-family: Outfit-Medium;
+    src: url(${outfitMediumFontUrl}) format('truetype');
+  }
+
   :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: ${({ theme }) => theme.fonts.outfit.medium}, sans-serif;
     font-weight: 400;
-    color-scheme: dark light;
-    color: ${(props) => props.theme.text};
-    background-color: ${(props) => props.theme.background};
-    
-    /* Disables scrolling entirely since this particular app doesn't need it. */
-    overflow: hidden;
+    color-scheme: dark;
+    background-color: ${({ theme }) => theme.colors.darkNavy};
+    color: ${({ theme }) => theme.colors.silver};
   }
 
   *,

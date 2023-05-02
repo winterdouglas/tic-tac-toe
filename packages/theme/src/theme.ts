@@ -1,29 +1,52 @@
-export interface Theme {
-  text: string;
-  background: string;
-  primary: string;
-  secondary: string;
-  tertiary: string;
-  highlight: string;
-  separator: string;
+import "styled-components";
+
+export type ColorPalette = {
+  lightBlue: string;
+  lightBlueHover: string;
+  lightYellow: string;
+  lightYellowHover: string;
+  darkNavy: string;
+  semiDarkNavy: string;
+  silver: string;
+  silverHover: string;
+};
+
+type FontWeights = {
+  bold: string;
+  medium: string;
+};
+
+export type Fonts = {
+  outfit: FontWeights;
+};
+
+export type Theme = {
+  colors: ColorPalette;
+  fonts: Fonts;
+};
+
+declare module "styled-components" {
+  // This is necessary to let styled-components know the theme properties
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface DefaultTheme extends Theme {}
 }
 
 export const darkTheme: Theme = {
-  text: "#edebf0",
-  background: "#263236",
-  primary: "#ff9921",
-  secondary: "#3F4D58",
-  tertiary: "#5AAF7C",
-  highlight: "#60687B",
-  separator: "#fff",
-} as const;
+  colors: {
+    lightBlue: "hsl(178, 60%, 48%)",
+    lightBlueHover: "hsl(178, 75%, 65%)",
+    lightYellow: "hsl(39, 88%, 58%)",
+    lightYellowHover: "hsl(39, 100%, 69%)",
+    darkNavy: "hsl(202, 32%, 15%)",
+    semiDarkNavy: "hsl(199, 35%, 19%)",
+    silver: "hsl(198, 23%, 72%)",
+    silverHover: "hsl(197, 33%, 89%)",
+  },
 
-export const lightTheme: Theme = {
-  text: "#364955",
-  background: "#fff",
-  primary: "#007BAF",
-  secondary: "#E6F4F1",
-  tertiary: "#27B881",
-  highlight: "#F1FBFF",
-  separator: "#000",
+  fonts: {
+    outfit: {
+      bold: "Outfit-Bold",
+      medium: "Outfit-Medium",
+    },
+  },
 } as const;

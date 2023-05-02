@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "compile": "turbo run compile",
+    "doctor": "turbo run doctor",
     "build": "turbo run build",
     "start": "turbo run start",
     "web": "turbo run web",
@@ -11,6 +12,7 @@
     "android": "turbo run android",
     "clean": "turbo run clean && rm -rf node_modules",
     "lint": "turbo run lint",
+    "lint:css": "stylelint \"apps/**/*.{css,ts,tsx}\"",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "postinstall": "manypkg check"
   },
@@ -18,7 +20,10 @@
     "@manypkg/cli": "latest",
     "eslint": "^8.38.0",
     "eslint-config-custom": "workspace:^",
+    "postcss-styled-syntax": "^0.4.0",
     "prettier": "^2.8.7",
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard": "^33.0.0",
     "turbo": "latest"
   },
   "packageManager": "yarn@3.5.0",
@@ -27,10 +32,7 @@
     "packages/*"
   ],
   "resolutions": {
-    "react": "^18",
-    "styled-components": "^5",
-    "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "styled-components": "^5"
   },
   "manypkg": {
     "ignoredRules": [

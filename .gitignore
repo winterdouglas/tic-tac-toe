@@ -43,3 +43,5 @@ web-build/
 .turbo
 .expo
 .vite
+
+*.fig

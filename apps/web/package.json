@@ -9,28 +9,25 @@
     "build": "tsc && vite build",
     "web": "vite",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "lint:css": "stylelint './src/**/*.{ts,tsx,js,jsx}'"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@react-spring/web": "^9.7.2",
     "game-core": "workspace:^",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^5.3.9",
+    "react-native-web": "^0.19.4",
+    "styled-components": "^5.3.10",
     "theme": "workspace:^",
     "utils": "workspace:^"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11",
+    "@types/react": "~18.0.27",
+    "@types/react-dom": "~18.0.10",
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^3.1.0",
     "eslint-config-custom": "workspace:^",
-    "postcss-styled-syntax": "^0.4.0",
-    "stylelint": "^15.5.0",
-    "stylelint-config-standard": "^33.0.0",
     "tsconfig": "workspace:^",
     "typescript": "^4.9.4",
     "vite": "^4.2.0"

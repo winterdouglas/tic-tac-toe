@@ -1,16 +1,26 @@
-import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet } from "react-native";
-import { useTheme } from "theme";
-import { Building } from "./components/Building";
+import { StatusBar } from "expo-status-bar";
+import { ThemeProvider } from "styled-components";
+
+import { Button } from "game-core";
+import { darkTheme } from "theme";
+import { useOutfitFont } from "./hooks/useOutfitFont";
 
 export default function App() {
-  const { background } = useTheme();
+  const fontsLoaded = useOutfitFont();
+
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
-    <SafeAreaView style={[styles.safeArea, { backgroundColor: background }]}>
-      <StatusBar style="auto" />
-      <Building floorCount={6} />
-    </SafeAreaView>
+    <ThemeProvider theme={darkTheme}>
+      <SafeAreaView style={[styles.safeArea]}>
+        <StatusBar style="auto" />
+
+        <Button />
+      </SafeAreaView>
+    </ThemeProvider>
   );
 }
 
