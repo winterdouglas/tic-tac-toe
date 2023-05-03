@@ -17,7 +17,7 @@ export type TextProps = HTMLAttributes<HTMLElement> & {
 
 export const Text = ({
   variant = "span",
-  size,
+  size = "body",
   ...props
 }: TextProps): JSX.Element => {
   const Element = useMemo(() => variants[variant], [variant]);
