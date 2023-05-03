@@ -18,23 +18,20 @@ export type Fonts = {
   outfit: FontWeights;
 };
 
-type PlatformValue = {
-  web: string;
-  mobile: number;
-};
+export type Size = string | number;
 
 export type FontConfig = {
-  root: PlatformValue;
-  body: PlatformValue;
-  headingXS: PlatformValue;
-  headingS: PlatformValue;
-  headingM: PlatformValue;
-  headingL: PlatformValue;
+  root: Size;
+  body: Size;
+  headingXS: Size;
+  headingS: Size;
+  headingM: Size;
+  headingL: Size;
 };
 
 export type Theme = {
   colors: ColorPalette;
   fonts: Fonts;
   fontSizes: FontConfig;
-  letterSpacing: FontConfig;
+  letterSpacings: FontConfig;
 };

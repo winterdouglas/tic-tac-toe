@@ -11,9 +11,10 @@ export default defineConfig({
       { find: "@", replacement: "/src/" },
     ],
     extensions: [
-      ".web.js",
       ".web.ts",
       ".web.tsx",
+      ".web.js",
+      ".web.jsx",
       ".ts",
       ".tsx",
       ".js",

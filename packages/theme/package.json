@@ -10,7 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "styled-components": "^5.3.10"
+    "styled-components": "^5.3.10",
+    "utils": "workspace:^"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",

@@ -1,15 +1,14 @@
 import "styled-components";
 
-import { Theme } from "./types";
+import { PlatformResolver } from "utils";
+import { Size, Theme } from "./types";
 
 declare module "styled-components" {
   // This is necessary to let styled-components know the theme properties
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   export interface DefaultTheme extends Theme {}
 }
-/**
- * On web: 1rem = 14px (body)
- */
+
 export const defaultTheme: Theme = {
   colors: {
     lightBlue: "hsl(178, 60%, 48%)",
@@ -30,20 +29,20 @@ export const defaultTheme: Theme = {
   },
 
   fontSizes: {
-    root: { web: "16px", mobile: 16 },
-    body: { web: "0.875rem", mobile: 14 },
-    headingXS: { web: "1rem", mobile: 16 },
-    headingS: { web: "1.25rem", mobile: 20 },
-    headingM: { web: "1.5rem", mobile: 24 },
-    headingL: { web: "2.5rem", mobile: 40 },
+    root: PlatformResolver.resolve<Size>({ web: "16px", mobile: 16 }),
+    body: PlatformResolver.resolve<Size>({ web: "0.875rem", mobile: 14 }),
+    headingXS: PlatformResolver.resolve<Size>({ web: "1rem", mobile: 16 }),
+    headingS: PlatformResolver.resolve<Size>({ web: "1.25rem", mobile: 20 }),
+    headingM: PlatformResolver.resolve<Size>({ web: "1.5rem", mobile: 24 }),
+    headingL: PlatformResolver.resolve<Size>({ web: "2.5rem", mobile: 40 }),
   },
 
-  letterSpacing: {
-    root: { web: "1px", mobile: 1 },
-    body: { web: "0.0625em", mobile: 0.875 },
-    headingXS: { web: "0.0625em", mobile: 1 },
-    headingS: { web: "0.0625em", mobile: 1.25 },
-    headingM: { web: "0.0625em", mobile: 1.5 },
-    headingL: { web: "0.0625em", mobile: 2.5 },
+  letterSpacings: {
+    root: PlatformResolver.resolve<Size>({ web: "1px", mobile: 1 }),
+    body: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 0.875 }),
+    headingXS: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1 }),
+    headingS: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1.25 }),
+    headingM: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1.5 }),
+    headingL: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 2.5 }),
   },
 } as const;

@@ -19,7 +19,7 @@ export default function App() {
 }
 
 const Wrapper = () => {
-  const { colors, fontSizes, letterSpacing, fonts } = useTheme();
+  const { colors, fontSizes, letterSpacings, fonts } = useTheme();
 
   return (
     <SafeAreaView
@@ -29,8 +29,8 @@ const Wrapper = () => {
       <Text
         style={{
           fontFamily: fonts.outfit.bold,
-          fontSize: fontSizes.headingL.mobile,
-          letterSpacing: letterSpacing.headingL.mobile,
+          fontSize: fontSizes.headingL,
+          letterSpacing: letterSpacings.headingL,
           color: colors.silver,
         }}>
         Hi

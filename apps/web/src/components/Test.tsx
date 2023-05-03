@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Text = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.headingL.web};
+  font-size: ${({ theme }) => theme.fontSizes.headingL};
 `;
 
 export const Test = () => {
