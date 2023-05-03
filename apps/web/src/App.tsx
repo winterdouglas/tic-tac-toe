@@ -1,16 +1,15 @@
 import { ThemeProvider } from "styled-components";
 
-import { Button } from "game-core";
-import { darkTheme } from "theme";
-
-import { GlobalStyle } from "./GlobalStyle";
+import { defaultTheme } from "theme";
+import { GlobalStyle } from "@/GlobalStyle";
+import { Test } from "@/components/Test";
 
 export const App = () => {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
 
-      <Button />
+      <Test />
     </ThemeProvider>
   );
 };

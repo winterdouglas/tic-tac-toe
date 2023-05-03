@@ -6,10 +6,18 @@ export default defineConfig({
   plugins: [react(), splitVendorChunkPlugin()],
   cacheDir: ".vite",
   resolve: {
-    alias: {
-      "react-native": "react-native-web",
-      // "styled-components": "styled-components/native",
-    },
-    extensions: [".js", ".ts", ".jsx", ".tsx"],
+    alias: [
+      { find: "~", replacement: "/../../" },
+      { find: "@", replacement: "/src/" },
+    ],
+    extensions: [
+      ".web.js",
+      ".web.ts",
+      ".web.tsx",
+      ".ts",
+      ".tsx",
+      ".js",
+      ".jsx",
+    ],
   },
 });

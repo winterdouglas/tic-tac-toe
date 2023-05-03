@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import outfitBoldFontUrl from "../../../assets/fonts/Outfit-Bold.ttf";
-import outfitMediumFontUrl from "../../../assets/fonts/Outfit-Medium.ttf";
+
+import outfitBoldFontUrl from "~/assets/fonts/Outfit-Bold.ttf";
+import outfitMediumFontUrl from "~/assets/fonts/Outfit-Medium.ttf";
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -14,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
+    font-size: ${({ theme }) => theme.fontSizes.root};
     font-family: ${({ theme }) => theme.fonts.outfit.medium}, sans-serif;
     font-weight: 400;
     color-scheme: dark;

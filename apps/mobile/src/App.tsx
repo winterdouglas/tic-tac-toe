@@ -1,10 +1,8 @@
-import { SafeAreaView, StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { ThemeProvider } from "styled-components";
 
-import { Button } from "game-core";
-import { darkTheme } from "theme";
-import { useOutfitFont } from "./hooks/useOutfitFont";
+import { useOutfitFont } from "@/hooks/useOutfitFont";
+import { ThemeProvider, useTheme } from "@/contexts/Theme";
 
 export default function App() {
   const fontsLoaded = useOutfitFont();
@@ -14,15 +12,32 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <SafeAreaView style={[styles.safeArea]}>
-        <StatusBar style="auto" />
-
-        <Button />
-      </SafeAreaView>
+    <ThemeProvider>
+      <Wrapper />
     </ThemeProvider>
   );
 }
+
+const Wrapper = () => {
+  const { colors, fontSizes, letterSpacing, fonts } = useTheme();
+
+  return (
+    <SafeAreaView
+      style={[styles.safeArea, { backgroundColor: colors.darkNavy }]}>
+      <StatusBar style="auto" />
+
+      <Text
+        style={{
+          fontFamily: fonts.outfit.bold,
+          fontSize: fontSizes.headingL.mobile,
+          letterSpacing: letterSpacing.headingL.mobile,
+          color: colors.silver,
+        }}>
+        Hi
+      </Text>
+    </SafeAreaView>
+  );
+};
 
 const styles = StyleSheet.create({
   safeArea: {

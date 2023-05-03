@@ -4,8 +4,7 @@
   "extends": "./base.json",
   "compilerOptions": {
     "jsx": "react-native",
-    "lib": ["ESNext"],
-    "types": ["node", "react", "react-native"]
+    "lib": ["ESNext"]
   },
   "exclude": [
     "node_modules",
