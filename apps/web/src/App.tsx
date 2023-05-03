@@ -1,15 +1,17 @@
 import { ThemeProvider } from "styled-components";
 
 import { defaultTheme } from "theme";
-import { GlobalStyle } from "@/GlobalStyle";
-import { Test } from "@/components/Test";
+import { GlobalStyle } from "@/styles/GlobalStyle";
+import { Text } from "@/components/Text";
 
 export const App = () => {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
 
-      <Test />
+      <Text variant="span" size="body">
+        Hello again!
+      </Text>
     </ThemeProvider>
   );
 };

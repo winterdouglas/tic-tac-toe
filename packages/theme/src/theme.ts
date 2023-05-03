@@ -29,7 +29,7 @@ export const defaultTheme: Theme = {
   },
 
   fontSizes: {
-    root: PlatformResolver.resolve<Size>({ web: "16px", mobile: 16 }),
+    base: PlatformResolver.resolve<Size>({ web: "16px", mobile: 16 }),
     body: PlatformResolver.resolve<Size>({ web: "0.875rem", mobile: 14 }),
     headingXS: PlatformResolver.resolve<Size>({ web: "1rem", mobile: 16 }),
     headingS: PlatformResolver.resolve<Size>({ web: "1.25rem", mobile: 20 }),
@@ -38,7 +38,7 @@ export const defaultTheme: Theme = {
   },
 
   letterSpacings: {
-    root: PlatformResolver.resolve<Size>({ web: "1px", mobile: 1 }),
+    base: PlatformResolver.resolve<Size>({ web: "1px", mobile: 1 }),
     body: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 0.875 }),
     headingXS: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1 }),
     headingS: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1.25 }),

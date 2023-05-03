@@ -21,7 +21,7 @@ export type Fonts = {
 export type Size = string | number;
 
 export type FontConfig = {
-  root: Size;
+  base: Size;
   body: Size;
   headingXS: Size;
   headingS: Size;
