@@ -9,9 +9,7 @@ export const App = () => {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
 
-      <Text variant="span" size="body">
-        Hello again!
-      </Text>
+      <Text variant="h4">Hello again!</Text>
     </ThemeProvider>
   );
 };

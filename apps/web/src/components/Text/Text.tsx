@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { FontConfig } from "theme";
 import { bodyText, headingText } from "@/styles/mixins";
 
-type Variant = "span" | "p" | "h1" | "h2" | "h3" | "h4";
+type Variant = keyof typeof variants;
 
 type Size = keyof FontConfig;
 
