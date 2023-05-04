@@ -1,9 +1,8 @@
-import { SafeAreaView, StyleSheet } from "react-native";
-import { StatusBar } from "expo-status-bar";
-
 import { useOutfitFont } from "@/hooks/useOutfitFont";
-import { ThemeProvider, useTheme } from "@/contexts/Theme";
+import { ThemeProvider } from "@/contexts/Theme";
 import { Text } from "@/components/Text";
+import { Screen } from "@/components/Screen";
+import { Button } from "@/components/Button";
 
 export default function App() {
   const fontsLoaded = useOutfitFont();
@@ -14,26 +13,10 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <Wrapper />
+      <Screen>
+        <Text variant="headingXS">This is a text</Text>
+        <Button title="This is a button" />
+      </Screen>
     </ThemeProvider>
   );
 }
-
-const Wrapper = () => {
-  const { colors } = useTheme();
-
-  return (
-    <SafeAreaView
-      style={[styles.safeArea, { backgroundColor: colors.darkNavy }]}>
-      <StatusBar style="light" />
-
-      <Text variant="headingXS">Hi</Text>
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-  },
-});

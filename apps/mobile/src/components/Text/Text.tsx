@@ -20,16 +20,16 @@ export const Text = ({
   children,
   ...props
 }: TextProps) => {
-  const { colors, fontSizes, letterSpacings, fonts } = useTheme();
+  const { color, fontSize, letterSpacing, font } = useTheme();
 
   const style: StyleProp<TextStyle> = [
     {
       fontFamily: ["body", "base"].includes(variant)
-        ? fonts.outfit.medium
-        : fonts.outfit.bold,
-      fontSize: fontSizes[variant] as number,
-      letterSpacing: letterSpacings[variant] as number,
-      color: colors.silver,
+        ? font.outfit.medium
+        : font.outfit.bold,
+      fontSize: fontSize[variant] as number,
+      letterSpacing: letterSpacing[variant] as number,
+      color: color.silver,
     },
     $styleOverride,
   ];

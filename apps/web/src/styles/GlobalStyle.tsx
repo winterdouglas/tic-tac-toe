@@ -15,12 +15,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    font-size: ${({ theme }) => theme.fontSizes.base};
-    font-family: ${({ theme }) => theme.fonts.outfit.medium}, sans-serif;
-    letter-spacing: ${({ theme }) => theme.letterSpacings.base};
+    font-size: ${({ theme }) => theme.fontSize.base};
+    font-family: ${({ theme }) => theme.font.outfit.medium}, sans-serif;
+    letter-spacing: ${({ theme }) => theme.letterSpacing.base};
     color-scheme: dark;
-    background-color: ${({ theme }) => theme.colors.darkNavy};
-    color: ${({ theme }) => theme.colors.silver};
+    background-color: ${({ theme }) => theme.color.darkNavy};
+    color: ${({ theme }) => theme.color.silver};
   }
 
   *,

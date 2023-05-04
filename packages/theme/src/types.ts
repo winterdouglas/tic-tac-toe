@@ -21,17 +21,55 @@ export type Fonts = {
 export type Size = string | number;
 
 export type FontConfig = {
+  /** Size: 16 */
   base: Size;
+  /** Size: 14 */
   body: Size;
+  /** Size: 16 */
   headingXS: Size;
+  /** Size: 20 */
   headingS: Size;
+  /** Size: 24 */
   headingM: Size;
+  /** Size: 40 */
   headingL: Size;
 };
 
+export type Spaces = {
+  /** Size: 1 */
+  xxxs: Size;
+  /** Size: 2 */
+  xxs: Size;
+  /** Size: 4 */
+  xs: Size;
+  /** Size: 8 */
+  sm: Size;
+  /** Size: 16 */
+  md: Size;
+  /** Size: 20 */
+  lg: Size;
+  /** Size: 24 */
+  xl: Size;
+  /** Size: 32 */
+  xxl: Size;
+  /** Size: 64 */
+  xxxl: Size;
+};
+
+export type BorderRadius = {
+  /** Size: 5 */
+  sm: Size;
+  /** Size: 10 */
+  md: Size;
+  /** Size: 15 */
+  lg: Size;
+};
+
 export type Theme = {
-  colors: ColorPalette;
-  fonts: Fonts;
-  fontSizes: FontConfig;
-  letterSpacings: FontConfig;
+  color: ColorPalette;
+  font: Fonts;
+  fontSize: FontConfig;
+  letterSpacing: FontConfig;
+  spacing: Spaces;
+  borderRadius: BorderRadius;
 };

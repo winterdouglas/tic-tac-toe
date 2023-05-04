@@ -10,7 +10,7 @@ declare module "styled-components" {
 }
 
 export const defaultTheme: Theme = {
-  colors: {
+  color: {
     lightBlue: "hsl(178, 60%, 48%)",
     lightBlueHover: "hsl(178, 75%, 65%)",
     lightYellow: "hsl(39, 88%, 58%)",
@@ -21,14 +21,14 @@ export const defaultTheme: Theme = {
     silverHover: "hsl(197, 33%, 89%)",
   },
 
-  fonts: {
+  font: {
     outfit: {
       bold: "Outfit-Bold",
       medium: "Outfit-Medium",
     },
   },
 
-  fontSizes: {
+  fontSize: {
     base: PlatformResolver.resolve<Size>({ web: "16px", mobile: 16 }),
     body: PlatformResolver.resolve<Size>({ web: "0.875rem", mobile: 14 }),
     headingXS: PlatformResolver.resolve<Size>({ web: "1rem", mobile: 16 }),
@@ -37,12 +37,30 @@ export const defaultTheme: Theme = {
     headingL: PlatformResolver.resolve<Size>({ web: "2.5rem", mobile: 40 }),
   },
 
-  letterSpacings: {
+  letterSpacing: {
     base: PlatformResolver.resolve<Size>({ web: "1px", mobile: 1 }),
     body: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 0.875 }),
     headingXS: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1 }),
     headingS: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1.25 }),
     headingM: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1.5 }),
     headingL: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 2.5 }),
+  },
+
+  spacing: {
+    xxxs: PlatformResolver.resolve<Size>({ web: "0.0625rem", mobile: 1 }),
+    xxs: PlatformResolver.resolve<Size>({ web: "0.125rem", mobile: 2 }),
+    xs: PlatformResolver.resolve<Size>({ web: "0.25rem", mobile: 4 }),
+    sm: PlatformResolver.resolve<Size>({ web: "0.5rem", mobile: 8 }),
+    md: PlatformResolver.resolve<Size>({ web: "1rem", mobile: 16 }),
+    lg: PlatformResolver.resolve<Size>({ web: "1.25rem", mobile: 20 }),
+    xl: PlatformResolver.resolve<Size>({ web: "1.5rem", mobile: 24 }),
+    xxl: PlatformResolver.resolve<Size>({ web: "2rem", mobile: 32 }),
+    xxxl: PlatformResolver.resolve<Size>({ web: "4rem", mobile: 64 }),
+  },
+
+  borderRadius: {
+    sm: PlatformResolver.resolve<Size>({ web: "5px", mobile: 5 }),
+    md: PlatformResolver.resolve<Size>({ web: "10px", mobile: 10 }),
+    lg: PlatformResolver.resolve<Size>({ web: "15px", mobile: 15 }),
   },
 } as const;

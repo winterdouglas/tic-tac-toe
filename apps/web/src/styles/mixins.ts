@@ -18,12 +18,12 @@ export const visuallyHidden = css`
 
 export const headingText = (size: keyof FontConfig) => css`
   font-family: Outfit-Bold, sans-serif;
-  font-size: ${({ theme }) => theme.fontSizes[size]};
-  letter-spacing: ${({ theme }) => theme.letterSpacings[size]};
+  font-size: ${({ theme }) => theme.fontSize[size]};
+  letter-spacing: ${({ theme }) => theme.letterSpacing[size]};
 `;
 
 export const bodyText = css`
   font-family: Outfit-Medium, sans-serif;
-  font-size: ${({ theme }) => theme.fontSizes.body};
-  letter-spacing: ${({ theme }) => theme.letterSpacings.body};
+  font-size: ${({ theme }) => theme.fontSize.body};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.body};
 `;
