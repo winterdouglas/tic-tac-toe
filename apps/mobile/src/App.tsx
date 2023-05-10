@@ -15,7 +15,7 @@ export default function App() {
     <ThemeProvider>
       <Screen>
         <Text preset="hxs">This is a text</Text>
-        <Button preset="secondary" colorPreset="yellow" title="BUTTON 1" />
+        <Button preset="primary" colorPreset="silver" title="BUTTON 1" />
       </Screen>
     </ThemeProvider>
   );

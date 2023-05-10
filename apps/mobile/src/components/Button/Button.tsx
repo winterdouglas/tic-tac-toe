@@ -16,7 +16,7 @@ import { Theme } from "theme";
 export type ButtonProps = Omit<PressableProps, "children"> & {
   preset?: "primary" | "secondary";
 
-  colorPreset?: "blue" | "yellow" | "neutral";
+  colorPreset?: "blue" | "yellow" | "silver";
 
   /** The text to be displayed */
   title?: string;
@@ -37,7 +37,6 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const theme = useTheme();
-  const { color } = theme;
 
   const $colorPreset = $colorPresets(theme)[colorPreset];
 
@@ -65,7 +64,7 @@ export const Button = ({
     $textStyle,
 
     // The text color is the only one that doesn't change
-    { color: color.darkNavy },
+    { color: theme.color.darkNavy },
     $textStyleOverride,
   ];
 
@@ -134,7 +133,7 @@ const $colorPresets = (theme: Theme) => ({
     regular: theme.color.lightYellow,
     hover: theme.color.lightYellowHover,
   },
-  neutral: {
+  silver: {
     regular: theme.color.silver,
     hover: theme.color.silverHover,
   },
