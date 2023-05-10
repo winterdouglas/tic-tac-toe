@@ -21,15 +21,15 @@ export type Fonts = {
 export type Size = string | number;
 
 export type FontConfig = {
-  /** Size: 14 */
+  /** Size: 14, Letter Spacing: 0.8 */
   body: Size;
-  /** Size: 16 */
+  /** Size: 16, Letter Spacing: 1 */
   hxs: Size;
-  /** Size: 20 */
+  /** Size: 20, Letter Spacing: 1.25 */
   hs: Size;
-  /** Size: 24 */
+  /** Size: 24, Letter Spacing: 1.5 */
   hm: Size;
-  /** Size: 40 */
+  /** Size: 40, Letter Spacing: 2.5 */
   hl: Size;
 };
 
