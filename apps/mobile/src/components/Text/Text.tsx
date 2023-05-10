@@ -24,9 +24,7 @@ export const Text = ({
 
   const style: StyleProp<TextStyle> = [
     {
-      fontFamily: ["body", "base"].includes(variant)
-        ? font.outfit.medium
-        : font.outfit.bold,
+      fontFamily: variant === "body" ? font.outfit.medium : font.outfit.bold,
       fontSize: fontSize[variant] as number,
       letterSpacing: letterSpacing[variant] as number,
       color: color.silver,

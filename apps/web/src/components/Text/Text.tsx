@@ -1,28 +1,36 @@
-import { HTMLAttributes, useMemo } from "react";
+import { ComponentType, HTMLAttributes, ReactNode, useMemo } from "react";
 import styled from "styled-components";
 
 import { FontConfig } from "theme";
 import { bodyText, headingText } from "@/styles/mixins";
-
-type Variant = keyof typeof variants;
+import { ElementType } from "@react-spring/web";
 
 type Size = keyof FontConfig;
 
-type VariantProps = { size?: Size };
+type Preset = typeof presets;
 
-export type TextProps = HTMLAttributes<HTMLElement> & {
-  variant?: Variant;
+type PresetProps = HTMLAttributes<HTMLElement> & {
+  as?: ElementType;
   size?: Size;
+  children?: ReactNode;
 };
 
-export const Text = ({
-  variant = "span",
-  size = "body",
-  ...props
-}: TextProps): JSX.Element => {
-  const Element = useMemo(() => variants[variant], [variant]);
+export type TextProps = HTMLAttributes<HTMLElement> & {
+  preset?: keyof Preset;
+  renderAs?: ElementType;
+};
 
-  return <Element size={size} {...props} />;
+export const Text = ({ preset, renderAs, children, ...props }: TextProps) => {
+  const Component = useMemo(
+    () => presets[preset || "body"],
+    [preset]
+  ) as ComponentType<PresetProps>;
+
+  return (
+    <Component as={renderAs} {...props}>
+      {children}
+    </Component>
+  );
 };
 
 const customSize = (size?: Size) => {
@@ -32,27 +40,24 @@ const customSize = (size?: Size) => {
   return headingText(size);
 };
 
-const variants = {
-  span: styled.span<VariantProps>`
+const presets = {
+  body: styled.span<PresetProps>`
     ${({ size }) => customSize(size)}
   `,
-  p: styled.p<VariantProps>`
+  hl: styled.h1<PresetProps>`
+    ${headingText("hl")}
     ${({ size }) => customSize(size)}
   `,
-  h1: styled.h1<VariantProps>`
-    ${headingText("headingL")}
+  hm: styled.h2<PresetProps>`
+    ${headingText("hm")}
     ${({ size }) => customSize(size)}
   `,
-  h2: styled.h2<VariantProps>`
-    ${headingText("headingM")}
+  hs: styled.h3<PresetProps>`
+    ${headingText("hs")}
     ${({ size }) => customSize(size)}
   `,
-  h3: styled.h3<VariantProps>`
-    ${headingText("headingS")}
-    ${({ size }) => customSize(size)}
-  `,
-  h4: styled.h4<VariantProps>`
-    ${headingText("headingXS")}
+  hxs: styled.h4<PresetProps>`
+    ${headingText("hxs")}
     ${({ size }) => customSize(size)}
   `,
 };

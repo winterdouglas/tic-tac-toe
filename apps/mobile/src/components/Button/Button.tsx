@@ -66,7 +66,7 @@ export const Button = ({
       {...props}
       style={$pressableStyles}>
       <Animated.View style={$contentContainerStyles}>
-        <Text variant="headingXS" style={$textStyles}>
+        <Text variant="hxs" style={$textStyles}>
           {title}
         </Text>
       </Animated.View>

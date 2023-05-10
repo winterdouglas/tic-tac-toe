@@ -21,18 +21,16 @@ export type Fonts = {
 export type Size = string | number;
 
 export type FontConfig = {
-  /** Size: 16 */
-  base: Size;
   /** Size: 14 */
   body: Size;
   /** Size: 16 */
-  headingXS: Size;
+  hxs: Size;
   /** Size: 20 */
-  headingS: Size;
+  hs: Size;
   /** Size: 24 */
-  headingM: Size;
+  hm: Size;
   /** Size: 40 */
-  headingL: Size;
+  hl: Size;
 };
 
 export type Spaces = {

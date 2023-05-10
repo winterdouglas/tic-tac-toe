@@ -31,9 +31,6 @@
     "apps/*",
     "packages/*"
   ],
-  "resolutions": {
-    "styled-components": "^5"
-  },
   "manypkg": {
     "ignoredRules": [
       "INTERNAL_MISMATCH"

@@ -15,9 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    font-size: ${({ theme }) => theme.fontSize.base};
     font-family: ${({ theme }) => theme.font.outfit.medium}, sans-serif;
-    letter-spacing: ${({ theme }) => theme.letterSpacing.base};
     color-scheme: dark;
     background-color: ${({ theme }) => theme.color.darkNavy};
     color: ${({ theme }) => theme.color.silver};

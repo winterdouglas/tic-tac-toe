@@ -29,21 +29,19 @@ export const defaultTheme: Theme = {
   },
 
   fontSize: {
-    base: PlatformResolver.resolve<Size>({ web: "16px", mobile: 16 }),
     body: PlatformResolver.resolve<Size>({ web: "0.875rem", mobile: 14 }),
-    headingXS: PlatformResolver.resolve<Size>({ web: "1rem", mobile: 16 }),
-    headingS: PlatformResolver.resolve<Size>({ web: "1.25rem", mobile: 20 }),
-    headingM: PlatformResolver.resolve<Size>({ web: "1.5rem", mobile: 24 }),
-    headingL: PlatformResolver.resolve<Size>({ web: "2.5rem", mobile: 40 }),
+    hxs: PlatformResolver.resolve<Size>({ web: "1rem", mobile: 16 }),
+    hs: PlatformResolver.resolve<Size>({ web: "1.25rem", mobile: 20 }),
+    hm: PlatformResolver.resolve<Size>({ web: "1.5rem", mobile: 24 }),
+    hl: PlatformResolver.resolve<Size>({ web: "2.5rem", mobile: 40 }),
   },
 
   letterSpacing: {
-    base: PlatformResolver.resolve<Size>({ web: "1px", mobile: 1 }),
     body: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 0.875 }),
-    headingXS: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1 }),
-    headingS: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1.25 }),
-    headingM: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1.5 }),
-    headingL: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 2.5 }),
+    hxs: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1 }),
+    hs: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1.25 }),
+    hm: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 1.5 }),
+    hl: PlatformResolver.resolve<Size>({ web: "0.0625em", mobile: 2.5 }),
   },
 
   spacing: {
