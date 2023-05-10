@@ -9,7 +9,9 @@ export const App = () => {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
 
-      <Text preset="hl">Hello again!</Text>
+      <Text preset="hl" disabled={false}>
+        Hello again!
+      </Text>
     </ThemeProvider>
   );
 };

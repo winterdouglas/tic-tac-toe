@@ -8,14 +8,14 @@ import {
 import { FontConfig } from "theme";
 import { useTheme } from "@/contexts/Theme";
 
-type Variant = keyof FontConfig;
+type Preset = keyof FontConfig;
 
 export type TextProps = RNTextProps & {
-  variant?: Variant;
+  preset?: Preset;
 };
 
 export const Text = ({
-  variant = "body",
+  preset: variant = "body",
   style: $styleOverride,
   children,
   ...props

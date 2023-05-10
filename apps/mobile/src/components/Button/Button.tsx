@@ -11,8 +11,13 @@ import { changeHslStringLightness } from "utils";
 import { useTheme } from "@/contexts/Theme";
 import { Text } from "@/components/Text";
 import { useAnimatedBackgroundStyle } from "@/hooks/useAnimatedBackgroundStyle";
+import { Theme } from "theme";
 
 export type ButtonProps = Omit<PressableProps, "children"> & {
+  preset?: "primary" | "secondary";
+
+  colorPreset?: "blue" | "yellow" | "neutral";
+
   /** The text to be displayed */
   title?: string;
 
@@ -24,37 +29,42 @@ export type ButtonProps = Omit<PressableProps, "children"> & {
 };
 
 export const Button = ({
+  preset = "primary",
+  colorPreset = "yellow",
   title,
   style: $styleOverride,
   textStyle: $textStyleOverride,
   ...props
 }: ButtonProps) => {
-  const { borderRadius, spacing, color } = useTheme();
+  const theme = useTheme();
+  const { color } = theme;
+
+  const $colorPreset = $colorPresets(theme)[colorPreset];
+
   const { animatedStyle, onPressIn, onPressOut } = useAnimatedBackgroundStyle(
-    color.lightYellow,
-    color.lightYellowHover
+    $colorPreset.regular,
+    $colorPreset.hover
   );
 
   const $pressableStyles: StyleProp<ViewStyle> = [
+    $containerPresets(theme)[preset],
     {
-      borderRadius: borderRadius.lg as number,
-      backgroundColor: changeHslStringLightness(color.lightYellow, -15),
+      backgroundColor: changeHslStringLightness($colorPreset.regular, -20),
     },
     $styleOverride,
   ];
 
   const $contentContainerStyles: StyleProp<ViewStyle> = [
-    {
-      backgroundColor: color.silver,
-      borderRadius: borderRadius.lg as number,
-      padding: spacing.md,
-      marginBottom: spacing.sm,
-    },
+    $contentContainerStyle,
+    $contentContainerPresets(theme)[preset],
     animatedStyle,
   ];
 
+  const $textPreset = $textPresets[preset];
   const $textStyles: StyleProp<TextStyle> = [
     $textStyle,
+
+    // The text color is the only one that doesn't change
     { color: color.darkNavy },
     $textStyleOverride,
   ];
@@ -66,7 +76,7 @@ export const Button = ({
       {...props}
       style={$pressableStyles}>
       <Animated.View style={$contentContainerStyles}>
-        <Text variant="hxs" style={$textStyles}>
+        <Text preset={$textPreset} style={$textStyles}>
           {title}
         </Text>
       </Animated.View>
@@ -74,6 +84,58 @@ export const Button = ({
   );
 };
 
+const $containerPresets = ({ borderRadius, spacing }: Theme) => ({
+  primary: {
+    borderRadius: borderRadius.lg,
+
+    // This is the inner "shadow" size
+    paddingBottom: spacing.sm,
+  } as StyleProp<ViewStyle>,
+
+  secondary: {
+    borderRadius: borderRadius.md,
+
+    // This is the inner "shadow" size
+    paddingBottom: spacing.xs,
+  } as StyleProp<ViewStyle>,
+});
+
+const $contentContainerStyle: StyleProp<ViewStyle> = {
+  alignItems: "center",
+};
+
+const $contentContainerPresets = ({ borderRadius, spacing }: Theme) => ({
+  primary: {
+    borderRadius: borderRadius.lg as number,
+    padding: spacing.md,
+  } as StyleProp<ViewStyle>,
+
+  secondary: {
+    borderRadius: borderRadius.md as number,
+    padding: (spacing.md as number) - (spacing.xs as number),
+  } as StyleProp<ViewStyle>,
+});
+
 const $textStyle: TextStyle = {
   textTransform: "uppercase",
 };
+
+const $textPresets = {
+  primary: "hs" as const,
+  secondary: "hxs" as const,
+};
+
+const $colorPresets = (theme: Theme) => ({
+  blue: {
+    regular: theme.color.lightBlue,
+    hover: theme.color.lightBlueHover,
+  },
+  yellow: {
+    regular: theme.color.lightYellow,
+    hover: theme.color.lightYellowHover,
+  },
+  neutral: {
+    regular: theme.color.silver,
+    hover: theme.color.silverHover,
+  },
+});

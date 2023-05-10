@@ -47,6 +47,7 @@ export const GlobalStyle = createGlobalStyle`
   /* Set core body defaults */
   body {
     min-height: 100vh;
+    min-height: 100dvh;
     text-rendering: optimizespeed;
     line-height: 1.5;
   }

@@ -14,8 +14,8 @@ export default function App() {
   return (
     <ThemeProvider>
       <Screen>
-        <Text variant="headingXS">This is a text</Text>
-        <Button title="This is a button" />
+        <Text preset="hxs">This is a text</Text>
+        <Button preset="secondary" colorPreset="yellow" title="BUTTON 1" />
       </Screen>
     </ThemeProvider>
   );
